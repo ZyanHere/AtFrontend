@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="slider">
+        <div class="slide" style="display: block;">
+            <img src="https://www.hollywoodreporter.com/wp-content/uploads/2024/06/MCDWALL_EC011-16x9-1.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="https://jonnegroni.com/wp-content/uploads/2015/04/wall_e_a_l.jpg?w=700" alt="">
+        </div>
+        <div class="slide">
+            <img src="https://i.ytimg.com/vi/hf9ZTdrsEhY/mqdefault.jpg" alt="">
+        </div>
+        <div class="btn prev">
+            <
+        </div>
+        <div class="btn next">
+            >
+        </div>
+    </div>
+</body>
+<script>
+    let currentSlide = 0;
+    let slides = document.querySelectorAll('.slide');
+    let prevBtn = document.querySelector('.prev');
+    let nextBtn = document.querySelector('.next');
+    
+    function next() {
+        let nextSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].style.display = 'none';
+        slides[nextSlide].style.display = 'block';
+        currentSlide = nextSlide;
+    }
+
+    nextBtn.addEventListener('click', next)
+
+    prevBtn.addEventListener('click', function() {
+        let prevSlide = (currentSlide - 1 + slides.length) % slides.length;
+        slides[currentSlide].style.display = 'none';
+        slides[prevSlide].style.display = 'block';
+        currentSlide = prevSlide;
+    })
+
+    setInterval(next,2000)
+</script>
+</html>
