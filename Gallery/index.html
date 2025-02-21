@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="view-image">
+        <img src="https://res.allmacwallpaper.com/get/Retina-MacBook-Air-13-inch-wallpapers/2019-abominable-animated-movie-8k-2560x1600/20430-11.jpg" alt="">
+        <span>X</span>
+    </div>
+
+    <div class="image-container">
+        <img src="https://res.allmacwallpaper.com/get/Retina-MacBook-Air-13-inch-wallpapers/2019-abominable-animated-movie-8k-2560x1600/20430-11.jpg" alt="">
+        <img src="https://c4.wallpaperflare.com/wallpaper/232/754/386/fantasy-good-nature-clouds-sky-hd-wallpaper-preview.jpg" alt="">
+        <img src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Desktop-animation-movies-wallpapers-download.jpg" alt="">
+        <img src="https://w0.peakpx.com/wallpaper/926/179/HD-wallpaper-the-boss-baby-animated-movies-thumbnail.jpg" alt="">
+        <img src="https://w0.peakpx.com/wallpaper/326/350/HD-wallpaper-zootopia-movie-latest-zootopia-movies-animated-movies-cartoons-2016-movies.jpg" alt="">
+        <img src="https://webneel.com/wallpaper/sites/default/files/images/07-2013/18-despicable-me-2-animation-movie.jpg" alt="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxCxlBKS586Hl_WDTt80cKRa92766JC4N1QA&s" alt="">
+        <img src="https://w0.peakpx.com/wallpaper/182/341/HD-wallpaper-the-boss-baby-animated-management-movies-thumbnail.jpg" alt="">
+        <img src="https://wallpapers.com/images/hd/animation-movies-1920-x-1178-wallpaper-qv5l98diz1f1nqey.jpg" alt="">
+        <img src="https://img.goodfon.com/wallpaper/big/8/b5/the-wild-robot-poster-animation-movies-2024-movies-movies.webp" alt="">
+        <img src="https://4kwallpapers.com/images/walls/thumbs_2t/9221.jpg" alt="">
+        <img src="https://archive.org/download/kids_20160429/disney-tangled-animated-movie-wallpapers-free-download.jpg" alt="">
+        <img src="https://images.squarespace-cdn.com/content/v1/608d9ef497633c6b6eb71caf/1620591954769-IYFVLND1ZYOE54D74YJA/ezTOCR.jpg" alt="">
+        <img src="https://theculturednerd.org/wp-content/uploads/2024/02/best-batman-animated-movies-adventures.jpg">
+        <img src="https://c4.wallpaperflare.com/wallpaper/609/10/542/how-to-train-your-dragon-hiccup-toothless-animated-movies-wallpaper-preview.jpg">
+        <img src="https://imgix.ranker.com/list_img_v2/6672/2086672/original/2086672-u2?auto=format&q=50&fit=crop&fm=pjpg&dpr=2&crop=faces&h=185.86387434554973&w=355" alt="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThv68439ITWoYZjxWUiCtBXI9wEoZCCUcZjmgpQm-xlkxFKkSV-W-ImM6VQzgMzNT4rrc&usqp=CAU" alt="">
+        <img src="https://wallpapercave.com/wp/wp9102737.jpg" alt="">
+        <img src="https://c4.wallpaperflare.com/wallpaper/689/654/352/machine-the-explosion-sport-cartoon-wallpaper-preview.jpg" alt="">
+        <img src="https://c4.wallpaperflare.com/wallpaper/497/759/788/megamind-wallpaper-preview.jpg" alt="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv0kjiykf293McRW7fXn0DsmYeyaQxCsxImw&s" alt="">
+
+    </div>
+</body>
+<script>
+    let images = document.querySelectorAll(".image-container")
+    let viewImage = document.querySelector(".view-image")
+    let fullImage = document.querySelector(".view-image img")
+    let closeButton = document.querySelector(".view-image span")
+
+    for(let image of images){
+        image.addEventListener("click", function(e){
+            viewImage.style.display = "flex";
+            fullImage.src = e.target.src
+
+        })
+    }
+
+    closeButton.addEventListener("click", function(e){
+        viewImage.style.display = "none";
+    })
+
+</script>
+</html>
